@@ -129,7 +129,7 @@
 	// Copy coordinates array.
 	const coordinates = e.features[0].geometry.coordinates.slice();
 	const name = e.features[0].properties.COUNTRY;
-	const keyword = e.features[0].properties.KEYWORD;
+	const description = e.features[0].properties.LONG_DESCRIPTION;
 	const pdfurl = e.features[0].properties.LINK;
 
 	// Ensure that if the map is zoomed out such that multiple
@@ -141,7 +141,7 @@
 
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popup.setLngLat(coordinates).setHTML('<strong><center>' + name + '</strong></center><P>Description: <i>' + keyword + '</i></br> Download the report <a href=' + pdfurl + '>here</a></p>').addTo(map);
+	popup.setLngLat(coordinates).setHTML('<strong><center>' + name + '</strong></center><P>Description: <i>' + description + '</i></br> Download the report <a href=' + pdfurl + '>here</a></p>').addTo(map);
 	});
 
 	//map.on('mouseleave', 'Nexus-markers-layer', () => {
