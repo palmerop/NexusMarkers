@@ -129,7 +129,7 @@
 	// Copy coordinates array.
 	const coordinates = e.features[0].geometry.coordinates.slice();
 	const name = e.features[0].properties.COUNTRY;
-	const text = e.features[0].properties.KEYWORD;
+	const text = e.features[0].properties.DESCRIPTION;
 	const pdfurl = e.features[0].properties.LINK;
 
 	// Ensure that if the map is zoomed out such that multiple
