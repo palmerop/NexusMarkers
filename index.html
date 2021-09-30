@@ -140,8 +140,6 @@
 	});
 
 	map.on('click', 'Nexus-markers-layer', (e) => {
-	// Change the cursor style as a UI indicator.
-	map.getCanvas().style.cursor = 'pointer';
 
 	// Copy coordinates array.
 	const coordinates = e.features[0].geometry.coordinates.slice();
@@ -160,10 +158,13 @@
 	// based on the feature found.
 	popup.setLngLat(coordinates).setHTML('<H2>' + name + '</H2><P>' + text + '</br><a href=' + pdfurl + '>Click here to download the report</a></p>').addTo(map);
 	});
-
+	    
+	map.on('mouseenter', 'Nexus-markers-layer', () => {
+	map.getCanvas().style.cursor = 'pointer';
+	});
+	    
 	map.on('mouseleave', 'Nexus-markers-layer', () => {
 	map.getCanvas().style.cursor = '';
-	popup.remove();
 	});
 	    
     </script>
