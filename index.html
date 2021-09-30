@@ -59,7 +59,7 @@
 
 	map.dragRotate.disable();
 	map.touchZoomRotate.disableRotation();
-
+	map.addControl(new mapboxgl.NavigationControl());
 
         map.on('load', function () {
             // Loads data from the Google spreadsheet
