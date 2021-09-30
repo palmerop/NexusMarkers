@@ -17,7 +17,7 @@
         .mapboxgl-popup {
         	-webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.6));
         	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.6));
-		font: 10px/16px 'Roboto', Arial, Helvetica, sans-serif;
+		font: 10px/16px 'Roboto Condensed', Arial, Helvetica, sans-serif;
 		max-width: 600px;
 		max-width: 400px;
 		align-content: left;
@@ -142,7 +142,7 @@
 
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popup.setLngLat(coordinates).setHTML('<strong><center>' + name + '</strong></center><P><i>' + text + '</i></br><b>Download the report <a href=' + pdfurl + '>here</b></a></p>').addTo(map);
+	popup.setLngLat(coordinates).setHTML('<H3><strong><center>' + name + '</strong></center></H3><P><i>' + text + '</i></br><b>Download the report <a href=' + pdfurl + '>here</b></a></p>').addTo(map);
 	});
 
 	//map.on('mouseleave', 'Nexus-markers-layer', () => {
