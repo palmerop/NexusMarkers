@@ -142,7 +142,7 @@
 
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popup.setLngLat(coordinates).setHTML('<strong><center>' + name + '</strong></center><P><i>' + text + '</i></br> Download the report <a href=' + pdfurl + '>here</a></p>').addTo(map);
+	popup.setLngLat(coordinates).setHTML('<strong><center>' + name + '</strong></center><P><i>' + text + '</i></br><b>Download the report <a href=' + pdfurl + '>here</b></a></p>').addTo(map);
 	});
 
 	//map.on('mouseleave', 'Nexus-markers-layer', () => {
