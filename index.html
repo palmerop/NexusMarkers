@@ -27,7 +27,7 @@
 	.mapboxgl-popup-content {
         	background-color: #fff;
         	color: #4D4D4D;
-		padding: 10px
+		padding: 30px 30px 45px
     	}    
 	    
 	a:link {
@@ -155,7 +155,7 @@
 
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popup.setLngLat(coordinates).setHTML('<H2>' + name + '</H2><P>' + text + '</br><b><a href=' + pdfurl + '>Click here to download the report</b></a></p>').addTo(map);
+	popup.setLngLat(coordinates).setHTML('<H2>' + name + '</H2><P>' + text + '</br><a href=' + pdfurl + '>Click here to download the report</a></p>').addTo(map);
 	});
 
 	//map.on('mouseleave', 'Nexus-markers-layer', () => {
